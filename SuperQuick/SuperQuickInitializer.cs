@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
 
 namespace SuperQuick
 {
-    class SuperQuickInitializer
+    public class SuperQuickInitializer : DropCreateDatabaseIfModelChanges<SuperQuickContext>
     {
-        DropCreateDatabaseIfModelChanges<SuperQuickContext> 
-    { 
 
         protected override void Seed(SuperQuickContext context)
         {

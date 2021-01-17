@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SuperQuick
 {
-    class SuperQuickContext : DbContext
+    public class SuperQuickContext : DbContext
     {
         //public SuperQuickContext(): base("Name=SuperQuickContext") 
         //{ 

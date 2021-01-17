@@ -1,12 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace SuperQuick
 {
-    class MainWindowViewModel
+    public class MainWindowViewModel : INotifyPropertyChanged
     {
+        protected readonly SuperQuickContext context;
+
+        public MainWindowViewModel()
+        {
+            context = new SuperQuickContext();
+            Customers = new ObservableCollection<Customer>(context.Customers);
+        }
+
+
+        public ObservableCollection<Customer> Customers { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

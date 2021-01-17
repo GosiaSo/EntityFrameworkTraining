@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SuperQuick
 {
-    class Customer
+    public class Customer
     {
         public Customer()
         {
